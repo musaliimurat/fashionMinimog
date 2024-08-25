@@ -1,0 +1,206 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.myContainer {
+  width: 95%;
+  margin: auto;
+}
+
+.mainHeader .topHeader {
+  padding: 10px;
+  border-bottom: 0.3px solid rgba(204, 204, 204, 0.737254902);
+}
+.mainHeader .topHeader .socialMediaStatics .socialMediaBox {
+  margin-left: 20px;
+}
+.mainHeader .topHeader .fashionDiscoverMoreBox span {
+  position: relative;
+}
+.mainHeader .topHeader .fashionDiscoverMoreBox span::after {
+  position: absolute;
+  content: "";
+  width: 0.6px;
+  height: 15px;
+  background-color: #212529;
+  top: 20%;
+  margin-left: 2px;
+}
+.mainHeader .topHeader .fashionDiscoverMoreBox a {
+  margin-left: 2px;
+  position: relative;
+  color: #000;
+  transition: 0.3s ease;
+}
+.mainHeader .topHeader .fashionDiscoverMoreBox a:hover::before {
+  transform: scaleX(0) translateZ(0);
+  transform-origin: right;
+}
+.mainHeader .topHeader .fashionDiscoverMoreBox a:hover::after {
+  transform: scaleX(1) translateZ(1);
+  transform-origin: left;
+}
+.mainHeader .topHeader .fashionDiscoverMoreBox a::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #212529;
+  top: 100%;
+  right: 0;
+  transform: scaleX(1) translateZ(0);
+  transition: transform 0.7s ease;
+  transform-origin: left;
+}
+.mainHeader .topHeader .fashionDiscoverMoreBox a::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #212529;
+  top: 100%;
+  transform: scaleX(0) translateZ(0);
+  transition: transform 0.5s ease;
+  transform-origin: right;
+  left: 0;
+}
+.mainHeader .topHeader .priceLang #mainNav li {
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+}
+.mainHeader .topHeader .priceLang #mainNav li:hover .myChild-nav {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.mainHeader .topHeader .priceLang #mainNav li:first-child .myChild-nav {
+  overflow-y: scroll;
+  height: 200px;
+}
+.mainHeader .topHeader .priceLang #mainNav li:first-child .myChild-nav::-webkit-scrollbar {
+  background: #ccc;
+  width: 4px;
+}
+.mainHeader .topHeader .priceLang #mainNav li:first-child .myChild-nav::-webkit-scrollbar-thumb {
+  background-color: #f6f4f4;
+}
+.mainHeader .topHeader .priceLang #mainNav li .langChildNav {
+  left: -100% !important;
+}
+.mainHeader .topHeader .priceLang #mainNav li .myChild-nav {
+  opacity: 0;
+  visibility: none;
+  position: absolute;
+  left: -10%;
+  list-style: none;
+  transition: 0.5s ease;
+  transform: translateY(30px);
+  margin-left: 0;
+  padding-left: 0;
+  top: 100%;
+  display: block;
+  width: calc(100% + 60px);
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.bottomHeader {
+  padding: 20px 0;
+  background-color: #fff;
+}
+.bottomHeader .myNavMenu {
+  position: relative;
+}
+.bottomHeader .myNavMenu .navMainUl {
+  width: 83%;
+  margin: auto;
+  display: flex;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi {
+  color: #000;
+  margin-right: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi i {
+  font-size: 12px;
+  color: #000;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi .fa-angle-up {
+  display: none;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi:hover .navChildAllBox {
+  opacity: 1;
+  visibility: visible;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi:hover .navChildAllBox .myNavChildBox {
+  transform: translateX(0px);
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi:hover .fa-angle-down {
+  display: none;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi:hover .fa-angle-up {
+  display: inline-block;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi .navChildAllBox {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  position: absolute;
+  top: calc(100% + 20px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+  color: #fff;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi .navChildAllBox .myNavChildBox {
+  margin-top: 20px;
+  transform: translateX(-40px);
+  transition: 0.3s ease;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi .navChildAllBox .myNavChildBox .navChildUl {
+  margin-bottom: 50px;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi .navChildAllBox .myNavChildBox .navChildUl .navChildLi {
+  padding: 10px;
+  border-right: 0.5px solid rgba(235, 234, 234, 0.831372549);
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi .navChildAllBox .myNavChildBox .navChildUl .navChildLi:hover {
+  background-color: rgba(203, 203, 203, 0.5921568627);
+  border-radius: 8px;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi .navChildAllBox .myNavChildBox .navChildUl .navChildLi a {
+  color: rgba(0, 0, 0, 0.6235294118);
+  font-weight: 600;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi .navChildAllBox .myNavChildBox .navChildUl .navChildLi span {
+  transform: translateY(-7px) translateX(10px);
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 8px;
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi .navChildAllBox .myNavChildBox .navChildUl .navChildLi .newSpan {
+  background-color: rgb(213, 251, 239);
+  color: rgb(58, 144, 118);
+}
+.bottomHeader .myNavMenu .navMainUl .navMainLi .navChildAllBox .myNavChildBox .navChildUl .navChildLi .hotSpan {
+  background-color: rgb(255, 231, 231);
+  color: rgb(218, 63, 63);
+}
+
+body {
+  background-color: #f7f5f5;
+}/*# sourceMappingURL=main.css.map */

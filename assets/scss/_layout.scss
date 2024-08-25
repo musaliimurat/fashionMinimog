@@ -1,0 +1,239 @@
+.mainHeader {
+    .topHeader {
+        padding: 10px;
+
+        .socialMediaStatics {
+            .socialMediaBox {
+                margin-left: 20px;
+            }
+        }
+
+        .fashionDiscoverMoreBox {
+            span {
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 0.6px;
+                    height: 15px;
+                    background-color: $topHeaderBorderColor;
+                    top: 20%;
+                    margin-left: 2px;
+                }
+            }
+
+            a {
+                margin-left: 2px;
+                position: relative;
+                color: #000;
+                transition: .3s ease;
+
+                &:hover {
+                    &::before {
+                        transform: scaleX(0) translateZ(0);
+                        transform-origin: right;
+                    }
+
+                    &::after {
+                        transform: scaleX(1) translateZ(1);
+                        transform-origin: left;
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    height: 1px;
+                    width: 100%;
+                    background-color: $topHeaderBorderColor;
+                    top: 100%;
+                    right: 0;
+                    transform: scaleX(1) translateZ(0);
+                    transition: transform .7s ease;
+                    transform-origin: left;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    height: 1px;
+                    width: 100%;
+                    background-color: $topHeaderBorderColor;
+                    top: 100%;
+                    transform: scaleX(0) translateZ(0);
+                    transition: transform .5s ease;
+                    transform-origin: right;
+                    left: 0;
+
+                }
+            }
+        }
+
+        .priceLang {
+            #mainNav {
+                li {
+                    cursor: pointer;
+                    position: relative;
+                    margin-left: 20px;
+
+                    &:hover {
+                        .myChild-nav {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(0);
+
+                        }
+                    }
+
+                    &:first-child {
+                        .myChild-nav {
+                            overflow-y: scroll;
+                            height: 200px;
+
+                            &::-webkit-scrollbar {
+                                background: #ccc;
+                                width: 4px;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background-color: #f6f4f4;
+                            }
+                        }
+
+                    }
+
+                    .langChildNav {
+                        left: -100% !important;
+                    }
+
+                    .myChild-nav {
+                        opacity: 0;
+                        visibility: none;
+                        position: absolute;
+                        left: -10%;
+                        list-style: none;
+                        transition: .5s ease;
+                        transform: translateY(30px);
+                        margin-left: 0;
+                        padding-left: 0;
+                        top: 100%;
+                        display: block;
+                        width: calc(100% + 60px);
+                        margin-top: 10px;
+                        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+
+
+                    }
+                }
+            }
+        }
+
+        border-bottom: 0.3px solid #ccccccbc;
+    }
+}
+
+.bottomHeader {
+    padding: 20px 0;
+    background-color: #fff;
+
+    .myNavMenu {
+        position: relative;
+
+        .navMainUl {
+            width: 83%;
+            margin: auto;
+            display: flex;
+
+            .navMainLi {
+                color: #000;
+                margin-right: 15px;
+                font-weight: 600;
+                font-size: 16px;
+                i{
+                    font-size: 12px;
+                    color: #000;
+                }
+                .fa-angle-up{
+                    display: none;
+                   }
+                cursor: pointer;
+                &:hover {
+                    .navChildAllBox {
+                        opacity: 1;
+                        visibility: visible;
+                        .myNavChildBox {
+                            transform: translateX(0px);
+                        }
+                    }
+                   .fa-angle-down{
+                    display: none;
+                   }
+                   .fa-angle-up{
+                    display: inline-block;
+                   }
+                }
+
+                .navChildAllBox {
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .3s ease;
+                    position: absolute;
+                    top: calc(100% + 20px);
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding: 10px;
+                    width: 100%;
+                    left: 0;
+                    background-color: #fff;
+                    color: #fff;
+
+                    .myNavChildBox {
+                        margin-top: 20px;
+                        transform: translateX(-40px);
+                        transition: .3s ease;
+                        .navChildUl {
+                            margin-bottom: 50px;
+
+                            .navChildLi {
+                                padding: 10px;
+                                border-right: 0.5px solid #ebeaead4;
+
+                                &:hover {
+                                    background-color: #cbcbcb97;
+                                    border-radius: 8px;
+                                }
+
+                                a {
+                                    color: #0000009f;
+                                    font-weight: 600;
+                                }
+
+                                span {
+                                    transform: translateY(-7px) translateX(10px);
+                                    display: inline-block;
+                                    font-size: 12px;
+                                    padding: 2px 5px;
+                                    border-radius: 8px;
+                                }
+
+                                .newSpan {
+                                    background-color: rgba(213, 251, 239, 1);
+                                    color: rgba(58, 144, 118, 1);
+
+                                }
+
+                                .hotSpan {
+                                    background-color: rgba(255, 231, 231, 1);
+                                    color: rgba(218, 63, 63, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
